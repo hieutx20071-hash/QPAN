@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
-  <meta name="description" content="Ôn tập kiến thức về các quân, binh chủng QĐND Việt Nam">
-  <meta name="theme-color" content="#c62828">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
+  <meta name="description" content="Ôn tập kiến thức về các quân, binh chủng QĐND Việt Nam" />
+  <meta name="theme-color" content="#c62828" />
   <title>Ôn Tập Kiến Thức: Các Quân, Binh Chủng QĐND Việt Nam</title>
   <style>
     :root {
-      /* Primary Colors */
       --primary: #c62828;
       --primary-dark: #8e0000;
       --primary-light: #ef5350;
@@ -17,206 +16,113 @@
       --military-green: #2e7d32;
       --military-dark: #1b5e20;
       --military-light: #4caf50;
-      
-      /* UI Colors */
-      --bg-card: rgba(255, 255, 255, 0.95);
+      --bg-card: rgba(255, 255, 255, 0.96);
       --text-main: #0f172a;
       --text-muted: #64748b;
       --border-color: #cbd5e1;
-      
-      /* Shadows */
-      --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
-      --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.1);
-      --shadow-lg: 0 16px 36px rgba(0, 0, 0, 0.16);
-      
-      /* Radius */
+      --shadow-sm: 0 2px 8px rgba(0,0,0,0.06);
+      --shadow-md: 0 8px 24px rgba(0,0,0,0.1);
+      --shadow-lg: 0 16px 36px rgba(0,0,0,0.16);
       --radius-sm: 8px;
       --radius-md: 14px;
       --radius-lg: 20px;
-      
-      /* Font */
       --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-      --font-mono: "Fira Code", "Courier New", monospace;
-      
-      /* Transitions */
-      --transition-fast: 0.15s ease;
-      --transition-normal: 0.25s ease;
-      --transition-slow: 0.35s ease;
     }
 
-    /* Dark Mode Support */
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg-card: rgba(30, 41, 59, 0.95);
-        --text-main: #f8fafc;
-        --text-muted: #cbd5e1;
-        --border-color: #334155;
-      }
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: var(--font-family);
-      -webkit-tap-highlight-color: transparent;
-    }
-
-    html {
-      scroll-behavior: smooth;
-      overflow-x: hidden;
-    }
-
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: var(--font-family); }
+    html { scroll-behavior: smooth; }
     body {
       color: var(--text-main);
       line-height: 1.6;
-      padding-bottom: 90px;
       overflow-x: hidden;
-      position: relative;
-      background: linear-gradient(to bottom, rgba(241, 245, 249, 0.86), rgba(226, 232, 240, 0.92));
       min-height: 100vh;
-      transition: background var(--transition-slow);
+      background: linear-gradient(to bottom, rgba(241,245,249,0.86), rgba(226,232,240,0.92));
     }
 
-    @media (prefers-color-scheme: dark) {
-      body {
-        background: linear-gradient(to bottom, rgba(15, 23, 42, 0.95), rgba(30, 41, 59, 0.98));
-      }
-    }
-
-    /* Confetti Canvas */
     #confettiCanvas {
       position: fixed;
-      top: 0;
-      left: 0;
+      inset: 0;
       width: 100vw;
       height: 100vh;
       pointer-events: none;
       z-index: 9999;
     }
 
-    /* Header Banner */
     header {
-      background: linear-gradient(135deg, rgba(127, 0, 0, 0.94) 0%, rgba(183, 28, 28, 0.9) 50%, rgba(27, 94, 32, 0.94) 100%);
-      background-size: cover;
-      color: #ffffff;
+      background: linear-gradient(135deg, rgba(127,0,0,0.94), rgba(183,28,28,0.9) 52%, rgba(27,94,32,0.94)),
+                  linear-gradient(90deg, rgba(255,255,255,0.06), rgba(255,255,255,0));
+      color: white;
       padding: 34px 16px 28px;
-      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25);
       border-bottom: 3.5px solid var(--gold);
-      position: relative;
-      animation: slideDown var(--transition-normal);
-    }
-
-    @keyframes slideDown {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
+      box-shadow: 0 6px 24px rgba(0,0,0,0.25);
     }
 
     .header-inner {
       max-width: 960px;
       margin: 0 auto;
+      text-align: center;
       display: flex;
       flex-direction: column;
-      align-items: center;
-      text-align: center;
       gap: 12px;
+      align-items: center;
     }
 
     .header-top-badge {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: rgba(0, 0, 0, 0.35);
-      border: 1px solid rgba(255, 214, 0, 0.6);
-      padding: 5px 18px;
-      border-radius: 30px;
-      font-size: 0.85rem;
-      font-weight: 700;
+      border: 1px solid rgba(255,214,0,0.6);
+      background: rgba(0,0,0,0.35);
+      padding: 6px 18px;
+      border-radius: 999px;
       color: var(--gold);
+      font-weight: 800;
+      font-size: 0.8rem;
       letter-spacing: 0.6px;
       text-transform: uppercase;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-      animation: fadeInUp 0.5s ease 0.1s both;
     }
 
-    .star-icon {
-      color: var(--gold);
-      font-size: 1.15rem;
-      filter: drop-shadow(0 0 4px rgba(255, 214, 0, 0.8));
-      animation: pulse 2s infinite;
-    }
-
-    @keyframes pulse {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.8; transform: scale(1.1); }
-    }
+    .star-icon { filter: drop-shadow(0 0 6px rgba(255,214,0,0.85)); }
 
     h1 {
-      font-size: 1.65rem;
-      font-weight: 900;
-      letter-spacing: -0.4px;
+      font-size: clamp(1.5rem, 2vw, 2.3rem);
       line-height: 1.25;
-      text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
-      animation: fadeInUp 0.5s ease 0.2s both;
-    }
-
-    @media (min-width: 768px) {
-      h1 { font-size: 2.2rem; }
+      font-weight: 900;
+      text-shadow: 0 2px 6px rgba(0,0,0,0.5);
     }
 
     .header-desc {
       font-size: 0.96rem;
-      color: #f8fafc;
-      max-width: 720px;
       opacity: 0.96;
-      font-weight: 400;
-      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
-      animation: fadeInUp 0.5s ease 0.3s both;
+      max-width: 720px;
+      color: #f8fafc;
     }
 
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(15px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    /* Main Container */
     .main-container {
       max-width: 960px;
       margin: 20px auto 0;
-      padding: 0 16px;
+      padding: 0 16px 90px;
     }
 
-    /* Sticky Control Panel */
     .sticky-control-wrapper {
       position: sticky;
       top: 10px;
       z-index: 120;
       margin-bottom: 22px;
-      transition: all var(--transition-normal);
     }
 
     .sticky-control-panel {
-      background: rgba(255, 255, 255, 0.96);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
+      background: rgba(255,255,255,0.96);
+      border: 1.5px solid rgba(198,40,40,0.25);
       border-radius: var(--radius-md);
-      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.14);
-      border: 1.5px solid rgba(198, 40, 40, 0.25);
+      box-shadow: 0 8px 24px rgba(15,23,42,0.14);
       padding: 14px 18px;
-      animation: slideDown var(--transition-normal);
-    }
-
-    @media (prefers-color-scheme: dark) {
-      .sticky-control-panel {
-        background: rgba(30, 41, 59, 0.96);
-        border-color: rgba(198, 40, 40, 0.5);
-      }
     }
 
     .sticky-meta-row {
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
       gap: 12px;
       flex-wrap: wrap;
     }
@@ -238,25 +144,20 @@
       width: 34px;
       height: 34px;
       border-radius: 8px;
+      background: #f1f5f9;
+      border: 1px solid #cbd5e1;
+      color: var(--primary);
       display: flex;
       align-items: center;
       justify-content: center;
-      background: #f1f5f9;
-      color: var(--primary);
-      border: 1px solid #cbd5e1;
-      transition: all var(--transition-fast);
-    }
-
-    .stat-icon-circle:hover {
-      transform: scale(1.08);
-      box-shadow: 0 2px 8px rgba(198, 40, 40, 0.15);
+      font-size: 1rem;
     }
 
     .stat-text-label {
       font-size: 0.76rem;
-      text-transform: uppercase;
-      font-weight: 700;
       color: var(--text-muted);
+      font-weight: 700;
+      text-transform: uppercase;
       line-height: 1.1;
     }
 
@@ -271,84 +172,64 @@
       display: flex;
       align-items: center;
       gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .btn-quick-submit,
+    .btn-toggle-palette,
+    .btn-submit-quiz,
+    .action-sub-btn,
+    .filter-chip,
+    .btn-modal,
+    .chip-item,
+    .p-btn,
+    .opt-item {
+      transition: all 0.2s ease;
+      user-select: none;
     }
 
     .btn-quick-submit {
-      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-      color: #ffffff;
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      color: #fff;
       border: none;
       border-radius: 20px;
       padding: 8px 18px;
-      font-size: 0.88rem;
       font-weight: 800;
+      font-size: 0.88rem;
       cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      box-shadow: 0 3px 10px rgba(198, 40, 40, 0.3);
-      transition: all var(--transition-normal);
-      white-space: nowrap;
-      user-select: none;
+      box-shadow: 0 3px 10px rgba(198,40,40,0.3);
     }
-
-    .btn-quick-submit:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 16px rgba(198, 40, 40, 0.4);
-    }
-
-    .btn-quick-submit:active {
-      transform: translateY(0);
-      box-shadow: 0 2px 8px rgba(198, 40, 40, 0.3);
-    }
+    .btn-quick-submit:hover { transform: translateY(-1px); }
 
     .btn-toggle-palette {
       background: #f1f5f9;
-      color: #334155;
       border: 1px solid #cbd5e1;
+      color: #334155;
       border-radius: 8px;
       padding: 6px 12px;
-      font-size: 0.82rem;
       font-weight: 700;
       cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      transition: all var(--transition-normal);
-      user-select: none;
     }
 
-    .btn-toggle-palette:hover {
-      background: #e2e8f0;
-      border-color: #94a3b8;
-    }
-
-    .btn-toggle-palette:active {
-      transform: scale(0.96);
-    }
-
-    /* Progress Track */
     .sticky-progress-track {
-      width: 100%;
       height: 7px;
+      width: 100%;
       background: #e2e8f0;
-      border-radius: 4px;
+      border-radius: 999px;
       overflow: hidden;
       margin: 10px 0;
-      box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05);
     }
 
     .sticky-progress-fill {
-      height: 100%;
       width: 0%;
+      height: 100%;
       background: linear-gradient(90deg, #2e7d32, #43a047, #ffd600);
-      border-radius: 4px;
-      transition: width var(--transition-slow) cubic-bezier(0.4, 0, 0.2, 1);
-      box-shadow: 0 0 8px rgba(45, 212, 191, 0.4);
+      border-radius: 999px;
+      transition: width 0.3s ease;
     }
 
-    /* Palette Navigator */
     .sticky-palette-body {
-      transition: max-height var(--transition-normal), opacity var(--transition-normal);
+      transition: max-height 0.25s ease, opacity 0.25s ease;
       overflow: hidden;
     }
 
@@ -359,34 +240,34 @@
     }
 
     .sticky-palette-body:not(.collapsed) {
-      max-height: 200px;
+      max-height: 220px;
       opacity: 1;
     }
 
     .palette-legend-bar {
       display: flex;
       justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
       gap: 6px;
-      font-size: 0.78rem;
-      color: var(--text-muted);
+      flex-wrap: wrap;
       margin-bottom: 8px;
+      color: var(--text-muted);
+      font-size: 0.78rem;
     }
 
     .legend-tag {
       display: inline-flex;
       align-items: center;
-      gap: 4px;
+      gap: 5px;
     }
 
     .legend-dot-sq {
       width: 10px;
       height: 10px;
       border-radius: 3px;
+      display: inline-block;
     }
 
-    .dot-unanswered { background: #ffffff; border: 1px solid #94a3b8; }
+    .dot-unanswered { background: #fff; border: 1px solid #94a3b8; }
     .dot-answered { background: var(--military-green); }
     .dot-correct { background: #16a34a; }
     .dot-wrong { background: #dc2626; }
@@ -394,145 +275,83 @@
 
     .palette-grid-row {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(38px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(38px,1fr));
       gap: 6px;
     }
 
     .p-btn {
       height: 36px;
       border: 1.5px solid #cbd5e1;
-      border-radius: 8px;
-      background: #ffffff;
+      background: #fff;
       color: #334155;
+      border-radius: 8px;
       font-size: 0.88rem;
       font-weight: 700;
       cursor: pointer;
       display: flex;
       align-items: center;
       justify-content: center;
-      transition: all var(--transition-fast);
-      user-select: none;
     }
-
-    .p-btn:hover {
-      background: #f1f5f9;
-      border-color: #64748b;
-      transform: translateY(-1px);
-    }
-
-    .p-btn:focus {
-      outline: 2px solid var(--primary);
-      outline-offset: 1px;
-    }
-
+    .p-btn:hover { background: #f1f5f9; }
     .p-btn.answered {
       background: linear-gradient(135deg, var(--military-green), #1b5e20);
-      color: #ffffff;
+      color: white;
       border-color: #1b5e20;
-      box-shadow: 0 2px 4px rgba(46, 125, 50, 0.25);
     }
-
     .p-btn.current-target {
       outline: 2.5px solid var(--primary);
       outline-offset: 1px;
-      box-shadow: 0 0 12px rgba(198, 40, 40, 0.3);
     }
+    .p-btn.res-correct { background: #16a34a; color: white; border-color: #15803d; }
+    .p-btn.res-wrong { background: #dc2626; color: white; border-color: #b91c1c; }
+    .p-btn.res-skipped { background: #f59e0b; color: white; border-color: #d97706; }
 
-    .p-btn.res-correct {
-      background: #16a34a !important;
-      color: #ffffff !important;
-      border-color: #15803d !important;
-    }
-
-    .p-btn.res-wrong {
-      background: #dc2626 !important;
-      color: #ffffff !important;
-      border-color: #b91c1c !important;
-    }
-
-    .p-btn.res-skipped {
-      background: #f59e0b !important;
-      color: #ffffff !important;
-      border-color: #d97706 !important;
-    }
-
-    /* Result Dashboard */
     .result-section {
       display: none;
-      background: rgba(255, 255, 255, 0.98);
-      backdrop-filter: blur(16px);
+      background: rgba(255,255,255,0.98);
+      border: 2px solid #22c55e;
       border-radius: var(--radius-lg);
       padding: 28px 24px;
       margin-bottom: 24px;
       box-shadow: var(--shadow-lg);
-      border: 2px solid #22c55e;
-      position: relative;
-      animation: popIn 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+      animation: popIn 0.35s ease;
     }
-
-    .result-section.active {
-      display: block;
-    }
+    .result-section.active { display: block; }
 
     @keyframes popIn {
       from { opacity: 0; transform: scale(0.96) translateY(-10px); }
       to { opacity: 1; transform: scale(1) translateY(0); }
     }
 
-    .result-title-bar {
-      text-align: center;
-      margin-bottom: 18px;
-    }
-
-    .result-badge {
-      display: inline-block;
-      padding: 6px 22px;
-      border-radius: 30px;
-      font-size: 1.05rem;
-      font-weight: 800;
-      letter-spacing: 0.3px;
-      margin-top: 10px;
-      transition: all var(--transition-normal);
-    }
-
-    .result-badge:hover {
-      transform: scale(1.05);
-    }
-
-    .badge-gold { background: #fef08a; color: #854d0e; border: 1.5px solid #facc15; }
-    .badge-green { background: #dcfce7; color: #166534; border: 1.5px solid #86efac; }
-    .badge-blue { background: #e0f2fe; color: #075985; border: 1.5px solid #7dd3fc; }
-    .badge-amber { background: #fef3c7; color: #92400e; border: 1.5px solid #fcd34d; }
-    .badge-red { background: #fee2e2; color: #991b1b; border: 1.5px solid #fca5a5; }
+    .result-title-bar { text-align: center; margin-bottom: 18px; }
 
     .score-visual-container {
       display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin: 16px 0;
+      justify-content: center;
+      margin: 12px 0 20px;
     }
 
     .score-donut {
       width: 140px;
       height: 140px;
       border-radius: 50%;
-      background: conic-gradient(#16a34a 0%, #16a34a 0%, #e2e8f0 0%);
       display: flex;
       align-items: center;
       justify-content: center;
       box-shadow: var(--shadow-md);
-      transition: background var(--transition-slow);
+      background: conic-gradient(#16a34a 0%, #16a34a 0%, #e2e8f0 0%);
+      transition: background 0.8s ease;
     }
 
     .score-donut-hole {
       width: 110px;
       height: 110px;
       border-radius: 50%;
-      background: #ffffff;
+      background: white;
       display: flex;
       flex-direction: column;
-      align-items: center;
       justify-content: center;
+      align-items: center;
     }
 
     .score-number {
@@ -553,25 +372,17 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
       gap: 12px;
-      margin: 22px 0 16px;
+      margin: 20px 0 18px;
     }
 
     .stat-card {
-      background: #ffffff;
+      background: #fff;
+      border: 1px solid #cbd5e1;
       border-radius: 12px;
       padding: 14px 10px;
       text-align: center;
-      border: 1px solid var(--border-color);
       box-shadow: var(--shadow-sm);
-      transition: transform var(--transition-normal);
-      cursor: pointer;
     }
-
-    .stat-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    }
-
     .stat-card.card-correct { background: #f0fdf4; border-color: #bbf7d0; }
     .stat-card.card-wrong { background: #fef2f2; border-color: #fecaca; }
     .stat-card.card-skipped { background: #fffbeb; border-color: #fde68a; }
@@ -581,19 +392,17 @@
       font-weight: 900;
       line-height: 1.2;
     }
-
     .card-correct .stat-card-val { color: #16a34a; }
     .card-wrong .stat-card-val { color: #dc2626; }
     .card-skipped .stat-card-val { color: #d97706; }
 
     .stat-card-name {
-      font-size: 0.82rem;
-      color: var(--text-muted);
-      font-weight: 600;
       margin-top: 4px;
+      color: var(--text-muted);
+      font-size: 0.82rem;
+      font-weight: 600;
     }
 
-    /* Filter Chips */
     .filter-wrapper {
       display: flex;
       justify-content: center;
@@ -603,81 +412,40 @@
     }
 
     .filter-chip {
-      padding: 8px 18px;
-      border-radius: 30px;
-      border: 1.5px solid var(--border-color);
-      background: #ffffff;
+      background: white;
       color: #475569;
+      border: 1.5px solid var(--border-color);
+      border-radius: 30px;
+      padding: 8px 18px;
       font-size: 0.88rem;
       font-weight: 700;
       cursor: pointer;
-      transition: all var(--transition-normal);
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
     }
-
-    .filter-chip:hover {
-      background: #f1f5f9;
-      border-color: #94a3b8;
-    }
-
-    .filter-chip:focus {
-      outline: 2px solid var(--primary);
-      outline-offset: 1px;
-    }
-
     .filter-chip.active {
       background: #1e293b;
-      color: #ffffff;
+      color: white;
       border-color: #1e293b;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
     }
 
     .reset-bar {
-      text-align: center;
-      margin-top: 14px;
       display: flex;
       justify-content: center;
       gap: 12px;
       flex-wrap: wrap;
+      margin-top: 14px;
     }
 
     .action-sub-btn {
-      padding: 10px 20px;
+      border: none;
       border-radius: 30px;
+      padding: 10px 20px;
       font-size: 0.9rem;
       font-weight: 700;
       cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      transition: all var(--transition-normal);
-      border: none;
     }
+    .btn-redo-all { background: #e2e8f0; color: #334155; }
+    .btn-redo-wrong { background: #fee2e2; color: #b91c1c; border: 1px solid #fca5a5; }
 
-    .btn-redo-all {
-      background: #e2e8f0;
-      color: #334155;
-    }
-
-    .btn-redo-all:hover {
-      background: #cbd5e1;
-      transform: translateY(-1px);
-    }
-
-    .btn-redo-wrong {
-      background: #fee2e2;
-      color: #b91c1c;
-      border: 1px solid #fca5a5;
-    }
-
-    .btn-redo-wrong:hover {
-      background: #fecaca;
-      transform: translateY(-1px);
-    }
-
-    /* Questions Feed */
     .questions-wrapper {
       display: flex;
       flex-direction: column;
@@ -686,67 +454,57 @@
 
     .q-card {
       background: var(--bg-card);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
+      border: 1.5px solid rgba(255,255,255,0.85);
       border-radius: var(--radius-md);
       padding: 24px;
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.07);
-      border: 1.5px solid rgba(255, 255, 255, 0.85);
-      transition: transform var(--transition-normal), box-shadow var(--transition-normal), border-color var(--transition-normal);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.07);
       scroll-margin-top: 170px;
-      position: relative;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
     }
-
-    .q-card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.11);
-      border-color: #94a3b8;
-    }
-
+    .q-card:hover { box-shadow: 0 10px 28px rgba(0,0,0,0.11); border-color: #94a3b8; }
     .q-card.highlight-flash {
       animation: flashBorder 1.5s ease;
     }
 
     @keyframes flashBorder {
-      0%, 100% { border-color: rgba(255, 255, 255, 0.85); }
-      25%, 75% { border-color: var(--primary); box-shadow: 0 0 16px rgba(198, 40, 40, 0.5); }
+      0%,100% { border-color: rgba(255,255,255,0.85); }
+      25%,75% { border-color: var(--primary); box-shadow: 0 0 16px rgba(198,40,40,0.5); }
     }
 
     .q-meta {
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
+      gap: 8px;
       margin-bottom: 12px;
       flex-wrap: wrap;
-      gap: 8px;
     }
 
     .q-badge {
       background: #fee2e2;
       color: var(--primary);
-      padding: 4px 12px;
       border-radius: 6px;
-      font-size: 0.85rem;
+      padding: 4px 12px;
       font-weight: 800;
-      letter-spacing: 0.3px;
+      font-size: 0.85rem;
     }
 
     .q-category-tag {
-      font-size: 0.82rem;
-      color: var(--military-dark);
       background: #f0fdf4;
       border: 1px solid #bbf7d0;
+      color: var(--military-dark);
       padding: 3px 10px;
       border-radius: 6px;
       font-weight: 600;
+      font-size: 0.82rem;
     }
 
     .q-title {
       font-size: 1.08rem;
-      font-weight: 700;
-      color: #0f172a;
       line-height: 1.55;
+      font-weight: 700;
       margin-bottom: 18px;
+      color: #0f172a;
     }
 
     .opt-container {
@@ -759,93 +517,71 @@
       display: flex;
       align-items: flex-start;
       gap: 14px;
-      padding: 13px 16px;
-      border-radius: 12px;
+      background: #fff;
       border: 1.5px solid #e2e8f0;
-      background: #ffffff;
+      border-radius: 12px;
+      padding: 13px 16px;
       cursor: pointer;
-      transition: all var(--transition-normal);
-      user-select: none;
       font-size: 0.97rem;
       line-height: 1.5;
     }
-
     .opt-item:hover:not(.disabled) {
       background: #f8fafc;
       border-color: #94a3b8;
       transform: translateX(3px);
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     }
-
-    .opt-item:focus {
-      outline: 2px solid var(--primary);
-      outline-offset: 1px;
-    }
-
-    .opt-badge-letter {
-      width: 28px;
-      height: 28px;
-      border-radius: 50%;
-      background: #f1f5f9;
-      color: #475569;
-      font-weight: 800;
-      font-size: 0.85rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      border: 1.5px solid #cbd5e1;
-      transition: all var(--transition-fast);
-      margin-top: 1px;
-    }
-
     .opt-item.selected {
       background: #f0fdf4;
       border-color: #22c55e;
       color: #14532d;
       font-weight: 600;
-      box-shadow: 0 2px 8px rgba(34, 197, 94, 0.15);
+      box-shadow: 0 2px 8px rgba(34,197,94,0.15);
     }
-
-    .opt-item.selected .opt-badge-letter {
-      background: #22c55e;
-      color: #ffffff;
-      border-color: #16a34a;
-    }
-
     .opt-item.is-correct {
       background: #dcfce7 !important;
       border-color: #22c55e !important;
       color: #14532d !important;
       font-weight: 700;
     }
-
-    .opt-item.is-correct .opt-badge-letter {
-      background: #16a34a !important;
-      color: #ffffff !important;
-      border-color: #15803d !important;
-    }
-
     .opt-item.is-user-wrong {
       background: #fee2e2 !important;
       border-color: #ef4444 !important;
       color: #7f1d1d !important;
       font-weight: 600;
     }
+    .opt-item.disabled { cursor: default; pointer-events: none; }
 
+    .opt-badge-letter {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: #f1f5f9;
+      border: 1.5px solid #cbd5e1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      font-weight: 800;
+      color: #475569;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .opt-item.selected .opt-badge-letter {
+      background: #22c55e;
+      border-color: #16a34a;
+      color: white;
+    }
+    .opt-item.is-correct .opt-badge-letter {
+      background: #16a34a !important;
+      border-color: #15803d !important;
+      color: white !important;
+    }
     .opt-item.is-user-wrong .opt-badge-letter {
       background: #dc2626 !important;
-      color: #ffffff !important;
       border-color: #b91c1c !important;
+      color: white !important;
     }
 
-    .opt-item.disabled {
-      cursor: default;
-      pointer-events: none;
-      opacity: 0.7;
-    }
-
-    /* Explanation Box */
     .explanation-card {
       margin-top: 18px;
       padding: 16px 18px;
@@ -856,26 +592,17 @@
       border-right: 1px solid var(--border-color);
       border-bottom: 1px solid var(--border-color);
       display: none;
-      animation: slideInLeft var(--transition-normal);
     }
-
-    @keyframes slideInLeft {
-      from { opacity: 0; transform: translateX(-10px); }
-      to { opacity: 1; transform: translateX(0); }
-    }
-
-    .explanation-card.show {
-      display: block;
-    }
+    .explanation-card.show { display: block; }
 
     .exp-title {
-      font-size: 0.92rem;
-      font-weight: 800;
-      color: #166534;
       display: flex;
       align-items: center;
       gap: 7px;
       margin-bottom: 6px;
+      font-size: 0.92rem;
+      font-weight: 800;
+      color: #166534;
     }
 
     .exp-body {
@@ -884,143 +611,96 @@
       line-height: 1.6;
     }
 
-    /* Submit Section */
     .submit-cta-panel {
       margin-top: 36px;
       padding: 26px 20px;
-      background: rgba(255, 255, 255, 0.95);
+      background: rgba(255,255,255,0.95);
+      border: 1px solid var(--border-color);
       border-radius: var(--radius-md);
       box-shadow: var(--shadow-sm);
-      border: 1px solid var(--border-color);
       text-align: center;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 14px;
-      animation: fadeInUp 0.5s ease;
     }
 
     .btn-submit-quiz {
-      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-      color: #ffffff;
-      font-size: 1.12rem;
-      font-weight: 800;
-      padding: 16px 42px;
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      color: white;
       border: none;
       border-radius: 35px;
+      padding: 16px 42px;
+      font-size: 1.12rem;
+      font-weight: 800;
       cursor: pointer;
-      box-shadow: 0 6px 18px rgba(198, 40, 40, 0.35);
-      transition: all var(--transition-normal);
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      letter-spacing: 0.3px;
-      user-select: none;
+      box-shadow: 0 6px 18px rgba(198,40,40,0.35);
     }
+    .btn-submit-quiz:hover { transform: translateY(-2px); }
 
-    .btn-submit-quiz:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 10px 24px rgba(198, 40, 40, 0.45);
-    }
-
-    .btn-submit-quiz:active {
-      transform: translateY(-1px);
-      box-shadow: 0 4px 12px rgba(198, 40, 40, 0.35);
-    }
-
-    .btn-submit-quiz:disabled {
-      opacity: 0.6;
-      cursor: not-allowed;
-      transform: none;
-    }
-
-    /* Modal Dialog */
     .modal-backdrop {
       position: fixed;
       inset: 0;
-      background: rgba(15, 23, 42, 0.7);
-      backdrop-filter: blur(5px);
+      background: rgba(15,23,42,0.7);
       display: none;
       align-items: center;
       justify-content: center;
-      z-index: 1000;
       padding: 16px;
-      animation: fadeIn var(--transition-normal);
+      z-index: 1000;
     }
-
-    .modal-backdrop.open {
-      display: flex;
-    }
+    .modal-backdrop.open { display: flex; }
 
     .modal-dialog {
-      background: #ffffff;
+      background: white;
       border-radius: var(--radius-lg);
       padding: 28px 24px;
-      max-width: 520px;
-      width: 100%;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
-      text-align: center;
+      width: min(520px, 100%);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.25);
       max-height: 90vh;
       overflow-y: auto;
-      animation: zoomIn var(--transition-normal) cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    @keyframes zoomIn {
-      from { transform: scale(0.92); opacity: 0; }
-      to { transform: scale(1); opacity: 1; }
     }
 
     .modal-icon-badge {
       width: 60px;
       height: 60px;
       border-radius: 50%;
-      margin: 0 auto 16px;
       display: flex;
       align-items: center;
       justify-content: center;
+      margin: 0 auto 16px;
       font-size: 1.8rem;
-      animation: scaleIn var(--transition-normal);
     }
-
-    @keyframes scaleIn {
-      from { transform: scale(0.5); opacity: 0; }
-      to { transform: scale(1); opacity: 1; }
-    }
-
     .modal-icon-warning { background: #fef3c7; color: #d97706; border: 2px solid #fde68a; }
     .modal-icon-success { background: #dcfce7; color: #16a34a; border: 2px solid #bbf7d0; }
 
     .modal-heading {
+      text-align: center;
       font-size: 1.35rem;
+      margin-bottom: 8px;
       font-weight: 800;
       color: #0f172a;
-      margin-bottom: 8px;
     }
 
     .modal-body-text {
-      font-size: 0.98rem;
+      text-align: center;
       color: #475569;
       line-height: 1.55;
       margin-bottom: 18px;
     }
 
     .unanswered-card {
+      margin-bottom: 20px;
+      border-radius: 12px;
       background: #fffbeb;
       border: 1.5px solid #fef08a;
-      border-radius: 12px;
       padding: 16px;
-      margin-bottom: 20px;
       text-align: left;
     }
 
     .unanswered-title {
-      font-size: 0.88rem;
-      font-weight: 800;
-      color: #92400e;
-      margin-bottom: 10px;
       display: flex;
       align-items: center;
       gap: 6px;
+      color: #92400e;
+      font-size: 0.88rem;
+      font-weight: 800;
+      margin-bottom: 10px;
     }
 
     .unanswered-chips {
@@ -1030,26 +710,15 @@
     }
 
     .chip-item {
-      background: #ffffff;
-      color: #b45309;
       border: 1px solid #fcd34d;
-      padding: 6px 12px;
+      background: white;
+      color: #b45309;
       border-radius: 20px;
-      font-size: 0.85rem;
+      padding: 6px 12px;
       font-weight: 700;
       cursor: pointer;
-      transition: all var(--transition-normal);
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-      user-select: none;
     }
-
-    .chip-item:hover {
-      background: #fef3c7;
-      border-color: #f59e0b;
-      transform: scale(1.05);
-    }
+    .chip-item:hover { background: #fef3c7; }
 
     .modal-footer {
       display: flex;
@@ -1057,216 +726,37 @@
       gap: 10px;
       margin-top: 10px;
     }
-
     @media (min-width: 480px) {
-      .modal-footer {
-        flex-direction: row-reverse;
-      }
-      .modal-footer button {
-        flex: 1;
-      }
+      .modal-footer { flex-direction: row-reverse; }
+      .modal-footer button { flex: 1; }
     }
 
     .btn-modal {
-      padding: 12px 20px;
+      border: none;
       border-radius: 10px;
+      padding: 12px 20px;
       font-size: 0.95rem;
       font-weight: 700;
       cursor: pointer;
-      border: none;
-      transition: all var(--transition-normal);
-      user-select: none;
     }
+    .btn-modal-primary { background: var(--primary); color: white; }
+    .btn-modal-secondary { background: #f1f5f9; color: #475569; }
+    .btn-modal-success { background: var(--military-green); color: white; }
 
-    .btn-modal:hover {
-      transform: translateY(-1px);
-    }
-
-    .btn-modal:active {
-      transform: translateY(0);
-    }
-
-    .btn-modal-primary {
-      background: var(--primary);
-      color: #ffffff;
-    }
-
-    .btn-modal-primary:hover {
-      background: var(--primary-dark);
-      box-shadow: 0 4px 12px rgba(198, 40, 40, 0.3);
-    }
-
-    .btn-modal-secondary {
-      background: #f1f5f9;
-      color: #475569;
-    }
-
-    .btn-modal-secondary:hover {
-      background: #e2e8f0;
-    }
-
-    .btn-modal-success {
-      background: var(--military-green);
-      color: #ffffff;
-    }
-
-    .btn-modal-success:hover {
-      background: var(--military-dark);
-      box-shadow: 0 4px 12px rgba(46, 125, 50, 0.3);
-    }
-
-    /* Loading State */
-    .loading-spinner {
-      display: inline-block;
-      width: 16px;
-      height: 16px;
-      border: 2px solid rgba(198, 40, 40, 0.2);
-      border-top-color: var(--primary);
-      border-radius: 50%;
-      animation: spin 0.8s linear infinite;
-    }
-
-    @keyframes spin {
-      to { transform: rotate(360deg); }
-    }
-
-    /* Mobile Adjustments */
     @media (max-width: 600px) {
-      header {
-        padding: 24px 14px 20px;
-      }
-
-      h1 {
-        font-size: 1.4rem;
-      }
-
-      .sticky-control-wrapper {
-        top: 6px;
-      }
-
-      .sticky-control-panel {
-        padding: 10px 12px;
-      }
-
-      .sticky-stat-group {
-        gap: 8px;
-      }
-
-      .stat-icon-circle {
-        width: 30px;
-        height: 30px;
-        font-size: 0.75rem;
-      }
-
-      .stat-text-label {
-        font-size: 0.7rem;
-      }
-
-      .stat-text-val {
-        font-size: 0.95rem;
-      }
-
-      .sticky-actions-group {
-        gap: 6px;
-      }
-
-      .btn-quick-submit {
-        padding: 6px 14px;
-        font-size: 0.8rem;
-      }
-
-      .btn-toggle-palette {
-        padding: 5px 10px;
-        font-size: 0.75rem;
-      }
-
-      .q-card {
-        padding: 16px;
-      }
-
-      .q-title {
-        font-size: 1rem;
-      }
-
-      .opt-item {
-        padding: 10px 12px;
-        gap: 10px;
-      }
-
-      .opt-badge-letter {
-        width: 24px;
-        height: 24px;
-        font-size: 0.8rem;
-      }
-
-      .btn-submit-quiz {
-        width: 100%;
-        font-size: 1rem;
-        padding: 14px 24px;
-      }
-
-      .modal-dialog {
-        padding: 20px 16px;
-      }
-
-      .score-donut {
-        width: 120px;
-        height: 120px;
-      }
-
-      .score-donut-hole {
-        width: 95px;
-        height: 95px;
-      }
-
-      .score-number {
-        font-size: 2rem;
-      }
-
-      .stats-card-grid {
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-      }
-    }
-
-    /* Tablet Adjustments */
-    @media (min-width: 601px) and (max-width: 1024px) {
-      .sticky-stat-group {
-        gap: 10px;
-      }
-
-      .stats-card-grid {
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
-
-    /* Print Styles */
-    @media print {
-      header, .sticky-control-wrapper, .btn-submit-quiz {
-        display: none !important;
-      }
-
-      .q-card {
-        page-break-inside: avoid;
-        box-shadow: none;
-      }
-    }
-
-    /* Focus Visible (Accessibility) */
-    *:focus-visible {
-      outline: 2px solid var(--primary);
-      outline-offset: 2px;
-    }
-
-    /* Smooth Transitions */
-    * {
-      transition-property: background-color, border-color, color;
-      transition-duration: 0.2s;
-      transition-timing-function: ease;
+      .sticky-stat-group { gap: 10px; }
+      .sticky-control-panel { padding: 10px 12px; }
+      .stat-icon-circle { width: 30px; height: 30px; }
+      .q-card { padding: 16px; }
+      .opt-item { padding: 10px 12px; gap: 10px; }
+      .opt-badge-letter { width: 24px; height: 24px; }
+      .btn-submit-quiz { width: 100%; }
     }
   </style>
 </head>
 <body>
-  <!-- Header -->
+  <canvas id="confettiCanvas"></canvas>
+
   <header>
     <div class="header-inner">
       <div class="header-top-badge">
@@ -1278,9 +768,7 @@
     </div>
   </header>
 
-  <!-- Main Container -->
   <div class="main-container">
-    <!-- Sticky Control Panel -->
     <div class="sticky-control-wrapper">
       <div class="sticky-control-panel">
         <div class="sticky-meta-row">
@@ -1309,12 +797,8 @@
           </div>
 
           <div class="sticky-actions-group">
-            <button class="btn-quick-submit" id="quickSubmitBtn" aria-label="Nộp bài nhanh">
-              📤 Nộp Bài
-            </button>
-            <button class="btn-toggle-palette" id="togglePaletteBtn" aria-label="Bật tắt bảng điều hướng">
-              ▼
-            </button>
+            <button class="btn-quick-submit" id="quickSubmitBtn">📤 Nộp Bài</button>
+            <button class="btn-toggle-palette" id="togglePaletteBtn">▼</button>
           </div>
         </div>
 
@@ -1324,37 +808,21 @@
 
         <div class="sticky-palette-body collapsed" id="paletteBody">
           <div class="palette-legend-bar">
-            <span class="legend-tag">
-              <div class="legend-dot-sq dot-unanswered"></div>
-              Chưa làm
-            </span>
-            <span class="legend-tag">
-              <div class="legend-dot-sq dot-answered"></div>
-              Đã chọn
-            </span>
-            <span class="legend-tag">
-              <div class="legend-dot-sq dot-correct"></div>
-              Đúng
-            </span>
-            <span class="legend-tag">
-              <div class="legend-dot-sq dot-wrong"></div>
-              Sai
-            </span>
-            <span class="legend-tag">
-              <div class="legend-dot-sq dot-skipped"></div>
-              Bỏ qua
-            </span>
+            <span class="legend-tag"><span class="legend-dot-sq dot-unanswered"></span>Chưa làm</span>
+            <span class="legend-tag"><span class="legend-dot-sq dot-answered"></span>Đã chọn</span>
+            <span class="legend-tag"><span class="legend-dot-sq dot-correct"></span>Đúng</span>
+            <span class="legend-tag"><span class="legend-dot-sq dot-wrong"></span>Sai</span>
+            <span class="legend-tag"><span class="legend-dot-sq dot-skipped"></span>Bỏ qua</span>
           </div>
           <div class="palette-grid-row" id="paletteGrid"></div>
         </div>
       </div>
     </div>
 
-    <!-- Result Section -->
     <div class="result-section" id="resultSection">
       <div class="result-title-bar">
-        <h2 style="margin-bottom: 12px;">🎉 Kết Quả Bài Thi</h2>
-        <p class="stat-text-label" id="resultSummary">Câu đúng / Tổng câu</p>
+        <h2 style="margin-bottom:12px;">🎉 Kết Quả Bài Thi</h2>
+        <p class="stat-text-label" id="resultSummary">0 / 0 câu đúng</p>
       </div>
 
       <div class="score-visual-container">
@@ -1382,10 +850,10 @@
       </div>
 
       <div class="filter-wrapper">
-        <button class="filter-chip active" id="filterAll" aria-label="Xem tất cả">Tất Cả</button>
-        <button class="filter-chip" id="filterCorrect" aria-label="Xem câu đúng">✅ Đúng</button>
-        <button class="filter-chip" id="filterWrong" aria-label="Xem câu sai">❌ Sai</button>
-        <button class="filter-chip" id="filterSkipped" aria-label="Xem câu bỏ qua">⏭️ Bỏ Qua</button>
+        <button class="filter-chip active" data-filter="all">Tất Cả</button>
+        <button class="filter-chip" data-filter="correct">✅ Đúng</button>
+        <button class="filter-chip" data-filter="wrong">❌ Sai</button>
+        <button class="filter-chip" data-filter="skipped">⏭️ Bỏ Qua</button>
       </div>
 
       <div class="reset-bar">
@@ -1394,36 +862,507 @@
       </div>
     </div>
 
-    <!-- Questions Feed -->
     <div class="questions-wrapper" id="questionsWrapper"></div>
 
-    <!-- Submit Button -->
     <div class="submit-cta-panel">
-      <button class="btn-submit-quiz" id="submitBtn" aria-label="Nộp bài kiểm tra">
-        🚀 Nộp Bài & Xem Kết Quả
-      </button>
+      <button class="btn-submit-quiz" id="submitBtn">🚀 Nộp Bài & Xem Kết Quả</button>
     </div>
   </div>
 
-  <!-- Confetti Canvas -->
-  <canvas id="confettiCanvas"></canvas>
-
-  <!-- Modal Backdrop -->
   <div class="modal-backdrop" id="modalBackdrop">
-    <div class="modal-dialog" id="modalDialog">
-      <div class="modal-icon-badge modal-icon-warning" id="modalIcon"></div>
+    <div class="modal-dialog">
+      <div class="modal-icon-badge modal-icon-warning" id="modalIcon">⚠️</div>
       <h3 class="modal-heading" id="modalTitle">Thông Báo</h3>
-      <p class="modal-body-text" id="modalBody"></p>
+      <p class="modal-body-text" id="modalBody">Bạn chưa hoàn thành hết câu hỏi.</p>
       <div id="unansweredContainer"></div>
       <div class="modal-footer" id="modalFooter"></div>
     </div>
   </div>
 
   <script>
-    // Web App functionality will go here
-    // Initialize confetti canvas, handle interactions, etc.
-    
-    console.log('✨ QPAN - Quiz Platform Loaded Successfully');
+    const questions = [
+      {
+        id: 1,
+        category: 'Lý thuyết chung',
+        title: 'Quân đội nhân dân Việt Nam có nhiệm vụ bảo vệ độc lập, chủ quyền, toàn vẹn lãnh thổ và an ninh quốc gia của nước Cộng hòa xã hội chủ nghĩa Việt Nam?',
+        options: ['Đúng', 'Sai'],
+        answer: 0,
+        explanation: 'Quân đội nhân dân Việt Nam là lực lượng vũ trang nhân dân, có nhiệm vụ bảo vệ Tổ quốc, giữ gìn an ninh quốc gia và thực hiện nghĩa vụ quốc phòng.'
+      },
+      {
+        id: 2,
+        category: 'Binh chủng',
+        title: 'Binh chủng nào là lực lượng chủ lực tiến công, đánh chiếm và phòng ngự trên mặt đất?',
+        options: ['Binh chủng bộ binh', 'Binh chủng pháo binh', 'Binh chủng công binh', 'Binh chủng không quân'],
+        answer: 0,
+        explanation: 'Bộ binh là binh chủng quyết định trực tiếp trên chiến trường mặt đất, thực hiện chiến đấu gần, tiến công và phòng ngự.'
+      },
+      {
+        id: 3,
+        category: 'Quân chủng',
+        title: 'Binh chủng nào chủ yếu thực hiện nhiệm vụ bắn phá, yểm trợ hỏa lực cho các đơn vị chiến đấu?',
+        options: ['Bộ binh', 'Pháo binh', 'Công binh', 'Tăng thiết giáp'],
+        answer: 1,
+        explanation: 'Pháo binh có nhiệm vụ bắn phá, hỏa lực và hỗ trợ các đơn vị chiến đấu bằng hỏa lực nặng.'
+      },
+      {
+        id: 4,
+        category: 'Quân chủng',
+        title: 'Lực lượng nào có nhiệm vụ bảo vệ vùng trời, không phận và thực hiện chiến đấu trên không?',
+        options: ['Không quân', 'Hải quân', 'Bộ binh', 'Công binh'],
+        answer: 0,
+        explanation: 'Không quân là quân chủng thực hiện nhiệm vụ trên không, bảo vệ vùng trời và không phận quốc gia.'
+      },
+      {
+        id: 5,
+        category: 'Binh chủng',
+        title: 'Binh chủng nào thường thực hiện nhiệm vụ đánh dấu, san lấp, sửa chữa, đào hào, mở đường qua địa hình khó khăn?',
+        options: ['Công binh', 'Pháo binh', 'Tăng thiết giáp', 'Không quân'],
+        answer: 0,
+        explanation: 'Công binh là binh chủng chuyên trách về kỹ thuật, đào, sửa đường, mở luồng, xây dựng công sự chiến đấu.'
+      },
+      {
+        id: 6,
+        category: 'Quân chủng',
+        title: 'Hải quân Việt Nam có nhiệm vụ bảo vệ chủ quyền, an ninh trên biển, đảo và vùng biển của Tổ quốc?',
+        options: ['Đúng', 'Sai'],
+        answer: 0,
+        explanation: 'Hải quân có nhiệm vụ bảo vệ các tuyến biển, đảo, lãnh hải và thực hiện chiến đấu trên biển.'
+      },
+      {
+        id: 7,
+        category: 'Binh chủng',
+        title: 'Tăng - Thiết giáp chủ yếu được sử dụng cho nhiệm vụ nào sau đây?',
+        options: ['Đánh chặn, tấn công, đột phá trên mặt đất', 'Pháo binh yểm hộ', 'Bảo vệ vùng trời', 'Chữa bệnh ở bệnh viện quân y'],
+        answer: 0,
+        explanation: 'Tăng - thiết giáp có sức mạnh cơ động và hỏa lực lớn, phù hợp cho tấn công, đột phá và đánh chiếm.'
+      },
+      {
+        id: 8,
+        category: 'Lý thuyết chung',
+        title: 'Binh chủng nào được xem là “mặt trận” trực tiếp chiến đấu trên không gian đất liền, có nhiệm vụ tiêu diệt địch gần chiến tuyến?',
+        options: ['Bộ binh', 'Hải quân', 'Phòng không', 'Thuỷ quân lục chiến'],
+        answer: 0,
+        explanation: 'Bộ binh trực tiếp tham chiến trên mặt đất, đánh gần, bám sát chiến tuyến và chiến đấu trong địa hình thực tế.'
+      },
+      {
+        id: 9,
+        category: 'Quân chủng',
+        title: 'Quân chủng nào có nhiệm vụ chiến đấu trên biển, bảo vệ chủ quyền biển đảo và thực hiện các nhiệm vụ quân sự ở biển?',
+        options: ['Hải quân', 'Không quân', 'Pháo binh', 'Bộ binh'],
+        answer: 0,
+        explanation: 'Hải quân là quân chủng chuyên trách chiến đấu trên biển, bảo vệ vùng biển và hải đảo.'
+      },
+      {
+        id: 10,
+        category: 'Binh chủng',
+        title: 'Binh chủng nào tiến hành xây dựng công sự, bãi tập, hầm ngầm và hỗ trợ quân đội trong chiến đấu phòng ngự?',
+        options: ['Công binh', 'Pháo binh', 'Thiết giáp', 'Bộ binh'],
+        answer: 0,
+        explanation: 'Công binh có vai trò rất quan trọng trong xây dựng công sự, kỹ thuật chiến đấu, cứu hộ và đảm bảo đường vận chuyển.'
+      },
+      {
+        id: 11,
+        category: 'Lý thuyết chung',
+        title: 'Nhiệm vụ của quân đội nhân dân Việt Nam là bảo vệ sự sống còn của dân tộc, chủ quyền và sự ổn định của đất nước?',
+        options: ['Đúng', 'Sai'],
+        answer: 0,
+        explanation: 'Quân đội bảo vệ Tổ quốc, giữ vững an ninh, ổn định chính trị, trật tự xã hội và quyền lợi của nhân dân.'
+      },
+      {
+        id: 12,
+        category: 'Quân chủng',
+        title: 'Trong quân đội, lực lượng nào có nhiệm vụ phòng không, đánh chặn máy bay, tên lửa của đối phương?',
+        options: ['Phòng không', 'Công binh', 'Bộ binh', 'Hải quân'],
+        answer: 0,
+        explanation: 'Phòng không là lực lượng chuyên trách bảo vệ không phận, phát hiện và đánh chặn các mục tiêu trên không.'
+      }
+    ];
+
+    const state = {
+      selected: new Array(questions.length).fill(null),
+      submitted: false,
+      filter: 'all',
+      currentIndex: 0
+    };
+
+    const elements = {
+      totalQuestions: document.getElementById('totalQuestions'),
+      answeredCount: document.getElementById('answeredCount'),
+      progressPercent: document.getElementById('progressPercent'),
+      progressFill: document.getElementById('progressFill'),
+      paletteGrid: document.getElementById('paletteGrid'),
+      questionsWrapper: document.getElementById('questionsWrapper'),
+      submitBtn: document.getElementById('submitBtn'),
+      quickSubmitBtn: document.getElementById('quickSubmitBtn'),
+      togglePaletteBtn: document.getElementById('togglePaletteBtn'),
+      paletteBody: document.getElementById('paletteBody'),
+      resultSection: document.getElementById('resultSection'),
+      resultSummary: document.getElementById('resultSummary'),
+      correctCount: document.getElementById('correctCount'),
+      wrongCount: document.getElementById('wrongCount'),
+      skippedCount: document.getElementById('skippedCount'),
+      scoreDonut: document.getElementById('scoreDonut'),
+      scoreNumber: document.getElementById('scoreNumber'),
+      totalScoreQuestions: document.getElementById('totalScoreQuestions'),
+      modalBackdrop: document.getElementById('modalBackdrop'),
+      modalTitle: document.getElementById('modalTitle'),
+      modalBody: document.getElementById('modalBody'),
+      modalFooter: document.getElementById('modalFooter'),
+      unansweredContainer: document.getElementById('unansweredContainer'),
+      redoAllBtn: document.getElementById('redoAllBtn'),
+      redoWrongBtn: document.getElementById('redoWrongBtn')
+    };
+
+    function getAnsweredCount() {
+      return state.selected.filter(v => v !== null).length;
+    }
+
+    function getStats() {
+      const correct = state.selected.reduce((count, value, index) => {
+        if (value !== null && value === questions[index].answer) return count + 1;
+        return count;
+      }, 0);
+
+      const wrong = state.selected.reduce((count, value, index) => {
+        if (value !== null && value !== questions[index].answer) return count + 1;
+        return count;
+      }, 0);
+
+      const skipped = questions.length - getAnsweredCount();
+      return { correct, wrong, skipped };
+    }
+
+    function renderPalette() {
+      elements.paletteGrid.innerHTML = '';
+
+      questions.forEach((question, index) => {
+        const btn = document.createElement('button');
+        btn.className = 'p-btn';
+        btn.type = 'button';
+        btn.textContent = index + 1;
+
+        const value = state.selected[index];
+        const isAnswered = value !== null;
+        if (isAnswered) btn.classList.add('answered');
+        if (state.submitted) {
+          if (value === null) {
+            btn.classList.add('res-skipped');
+          } else if (value === questions[index].answer) {
+            btn.classList.add('res-correct');
+          } else {
+            btn.classList.add('res-wrong');
+          }
+        }
+
+        if (state.currentIndex === index && !state.submitted) {
+          btn.classList.add('current-target');
+        }
+
+        btn.addEventListener('click', () => {
+          const card = document.getElementById('q-' + index);
+          if (card) {
+            card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+          state.currentIndex = index;
+          renderPalette();
+          highlightQuestion(index);
+        });
+
+        elements.paletteGrid.appendChild(btn);
+      });
+    }
+
+    function highlightQuestion(index) {
+      document.querySelectorAll('.q-card').forEach((card) => card.classList.remove('highlight-flash'));
+      const card = document.getElementById('q-' + index);
+      if (card) {
+        card.classList.add('highlight-flash');
+      }
+    }
+
+    function updateProgress() {
+      const answered = getAnsweredCount();
+      const percent = Math.round((answered / questions.length) * 100);
+      elements.totalQuestions.textContent = questions.length;
+      elements.answeredCount.textContent = answered;
+      elements.progressPercent.textContent = percent + '%';
+      elements.progressFill.style.width = percent + '%';
+    }
+
+    function renderQuestions() {
+      elements.questionsWrapper.innerHTML = '';
+
+      questions.forEach((question, index) => {
+        const card = document.createElement('div');
+        card.className = 'q-card';
+        card.id = 'q-' + index;
+        card.dataset.state = 'visible';
+
+        const selectedValue = state.selected[index];
+        const isCorrect = selectedValue !== null && selectedValue === question.answer;
+        const isWrong = selectedValue !== null && selectedValue !== question.answer;
+
+        if (state.filter !== 'all') {
+          const visible =
+            (state.filter === 'correct' && isCorrect) ||
+            (state.filter === 'wrong' && isWrong) ||
+            (state.filter === 'skipped' && selectedValue === null && state.submitted);
+          card.style.display = visible ? 'block' : 'none';
+        }
+
+        const answerHtml = question.options.map((option, optionIndex) => {
+          const isSelected = selectedValue === optionIndex;
+          const showCorrect = state.submitted && optionIndex === question.answer;
+          const showWrong = state.submitted && isSelected && optionIndex !== question.answer;
+
+          let classes = 'opt-item';
+          if (isSelected) classes += ' selected';
+          if (showCorrect) classes += ' is-correct';
+          if (showWrong) classes += ' is-user-wrong';
+          if (state.submitted) classes += ' disabled';
+
+          return `
+            <button type="button" class="${classes}" data-index="${index}" data-option="${optionIndex}">
+              <span class="opt-badge-letter">${String.fromCharCode(65 + optionIndex)}</span>
+              <span>${option}</span>
+            </button>
+          `;
+        }).join('');
+
+        const explanationHtml = state.submitted ? `
+          <div class="explanation-card show">
+            <div class="exp-title">💡 Giải thích</div>
+            <div class="exp-body">${question.explanation}</div>
+          </div>
+        ` : '';
+
+        card.innerHTML = `
+          <div class="q-meta">
+            <span class="q-badge">Câu ${index + 1}</span>
+            <span class="q-category-tag">${question.category}</span>
+          </div>
+          <div class="q-title">${question.title}</div>
+          <div class="opt-container">${answerHtml}</div>
+          ${explanationHtml}
+        `;
+
+        card.querySelectorAll('.opt-item').forEach((btn) => {
+          btn.addEventListener('click', () => {
+            const optionIndex = Number(btn.dataset.option);
+            state.selected[index] = optionIndex;
+            state.currentIndex = index;
+            renderQuestions();
+            renderPalette();
+            updateProgress();
+          });
+        });
+
+        elements.questionsWrapper.appendChild(card);
+      });
+    }
+
+    function getUnansweredIndexes() {
+      return state.selected
+        .map((value, index) => value === null ? index : null)
+        .filter(value => value !== null);
+    }
+
+    function openModal({ title, body, unansweredIndexes = [] }) {
+      elements.modalTitle.textContent = title;
+      elements.modalBody.textContent = body;
+      elements.modalFooter.innerHTML = '';
+      elements.unansweredContainer.innerHTML = '';
+
+      if (unansweredIndexes.length) {
+        const card = document.createElement('div');
+        card.className = 'unanswered-card';
+        card.innerHTML = `
+          <div class="unanswered-title">📌 Câu chưa làm</div>
+          <div class="unanswered-chips">
+            ${unansweredIndexes.map(index => `<button type="button" class="chip-item" data-jump="${index}">Câu ${index + 1}</button>`).join('')}
+          </div>
+        `;
+        elements.unansweredContainer.appendChild(card);
+
+        card.querySelectorAll('.chip-item').forEach((chip) => {
+          chip.addEventListener('click', () => {
+            const jumpIndex = Number(chip.dataset.jump);
+            const targetCard = document.getElementById('q-' + jumpIndex);
+            if (targetCard) {
+              targetCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              state.currentIndex = jumpIndex;
+              renderPalette();
+              highlightQuestion(jumpIndex);
+            }
+            closeModal();
+          });
+        });
+      }
+
+      const confirmBtn = document.createElement('button');
+      confirmBtn.type = 'button';
+      confirmBtn.className = 'btn-modal btn-modal-primary';
+      confirmBtn.textContent = unansweredIndexes.length ? 'Tiếp tục làm' : 'Đồng ý';
+      confirmBtn.addEventListener('click', closeModal);
+      elements.modalFooter.appendChild(confirmBtn);
+
+      if (unansweredIndexes.length) {
+        const submitBtn = document.createElement('button');
+        submitBtn.type = 'button';
+        submitBtn.className = 'btn-modal btn-modal-success';
+        submitBtn.textContent = 'Nộp bài';
+        submitBtn.addEventListener('click', () => {
+          closeModal();
+          submitQuiz();
+        });
+        elements.modalFooter.appendChild(submitBtn);
+      }
+
+      elements.modalBackdrop.classList.add('open');
+    }
+
+    function closeModal() {
+      elements.modalBackdrop.classList.remove('open');
+    }
+
+    function computeResults() {
+      const stats = getStats();
+      const total = questions.length;
+      const percent = total ? Math.round((stats.correct / total) * 100) : 0;
+      return { ...stats, total, percent };
+    }
+
+    function updateResultPanel() {
+      const result = computeResults();
+      elements.resultSummary.textContent = `${result.correct} / ${result.total} câu đúng`;
+      elements.correctCount.textContent = result.correct;
+      elements.wrongCount.textContent = result.wrong;
+      elements.skippedCount.textContent = result.skipped;
+      elements.totalScoreQuestions.textContent = result.total;
+      elements.scoreNumber.textContent = result.correct;
+      elements.scoreDonut.style.background = `conic-gradient(#16a34a 0 ${result.percent}%, #e2e8f0 ${result.percent}% 100%)`;
+    }
+
+    function submitQuiz() {
+      const unanswered = getUnansweredIndexes();
+      if (unanswered.length) {
+        openModal({
+          title: 'Bạn còn câu chưa làm!',
+          body: 'Hãy hoàn thành tất cả các câu hỏi trước khi nộp bài.',
+          unansweredIndexes: unanswered
+        });
+        return;
+      }
+
+      state.submitted = true;
+      updateResultPanel();
+      elements.resultSection.classList.add('active');
+      renderQuestions();
+      renderPalette();
+      document.getElementById('resultSection').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      triggerConfetti();
+    }
+
+    function resetQuiz() {
+      state.selected = new Array(questions.length).fill(null);
+      state.submitted = false;
+      state.filter = 'all';
+      state.currentIndex = 0;
+      elements.resultSection.classList.remove('active');
+      document.querySelectorAll('.filter-chip').forEach(chip => {
+        chip.classList.toggle('active', chip.dataset.filter === 'all');
+      });
+      renderQuestions();
+      renderPalette();
+      updateProgress();
+    }
+
+    function redoWrongAnswers() {
+      state.selected = state.selected.map((value, index) => {
+        if (value === null) return null;
+        return value === questions[index].answer ? value : null;
+      });
+      state.submitted = false;
+      state.filter = 'all';
+      renderQuestions();
+      renderPalette();
+      updateProgress();
+      document.querySelectorAll('.filter-chip').forEach(chip => chip.classList.toggle('active', chip.dataset.filter === 'all'));
+    }
+
+    function attachFilterEvents() {
+      document.querySelectorAll('.filter-chip').forEach((chip) => {
+        chip.addEventListener('click', () => {
+          state.filter = chip.dataset.filter;
+          document.querySelectorAll('.filter-chip').forEach(item => item.classList.toggle('active', item === chip));
+          renderQuestions();
+        });
+      });
+    }
+
+    document.getElementById('togglePaletteBtn').addEventListener('click', () => {
+      elements.paletteBody.classList.toggle('collapsed');
+    });
+
+    elements.submitBtn.addEventListener('click', submitQuiz);
+    elements.quickSubmitBtn.addEventListener('click', submitQuiz);
+    elements.redoAllBtn.addEventListener('click', resetQuiz);
+    elements.redoWrongBtn.addEventListener('click', redoWrongAnswers);
+    elements.modalBackdrop.addEventListener('click', (e) => {
+      if (e.target === elements.modalBackdrop) closeModal();
+    });
+
+    function triggerConfetti() {
+      const canvas = document.getElementById('confettiCanvas');
+      const ctx = canvas.getContext('2d');
+      const particles = [];
+      const colors = ['#ef4444', '#f59e0b', '#22c55e', '#3b82f6', '#a855f7', '#facc15'];
+
+      function resizeCanvas() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+      }
+
+      resizeCanvas();
+      window.addEventListener('resize', resizeCanvas);
+
+      for (let i = 0; i < 100; i++) {
+        particles.push({
+          x: canvas.width / 2,
+          y: canvas.height / 2,
+          vx: (Math.random() - 0.5) * 12,
+          vy: (Math.random() - 0.5) * 12 - 3,
+          size: Math.random() * 6 + 3,
+          color: colors[Math.floor(Math.random() * colors.length)],
+          life: 100,
+          gravity: 0.12
+        });
+      }
+
+      function draw() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        particles.forEach((p, i) => {
+          p.x += p.vx;
+          p.y += p.vy;
+          p.vy += p.gravity;
+          p.life -= 1;
+          ctx.fillStyle = p.color;
+          ctx.fillRect(p.x, p.y, p.size, p.size);
+        });
+        for (let i = particles.length - 1; i >= 0; i--) {
+          if (particles[i].life <= 0) particles.splice(i, 1);
+        }
+        if (particles.length > 0) requestAnimationFrame(draw);
+      }
+
+      draw();
+    }
+
+    attachFilterEvents();
+    renderQuestions();
+    renderPalette();
+    updateProgress();
   </script>
 </body>
 </html>
