@@ -883,163 +883,263 @@
     const questions = [
       {
         id: 1,
-        category: 'Lý thuyết chung',
-        title: 'Quân đội nhân dân Việt Nam có nhiệm vụ bảo vệ độc lập, chủ quyền, toàn vẹn lãnh thổ và an ninh quốc gia của nước Cộng hòa xã hội chủ nghĩa Việt Nam?',
-        options: ['Đúng', 'Sai'],
+        category: 'Lịch sử QĐND Việt Nam',
+        title: 'Tiền thân của Quân đội nhân dân Việt Nam là Đội Việt Nam tuyên truyền giải phóng quân được thành lập vào ngày tháng năm nào, ở đâu và do ai chỉ huy?',
+        options: [
+          'A. Ngày 22/12/1944 tại huyện Nguyên Bình, tỉnh Cao Bằng, do đồng chí Võ Nguyên Giáp chỉ huy',
+          'B. Ngày 15/5/1945 tại Định Hóa, Thái Nguyên, do đồng chí Chu Văn Tấn chỉ huy',
+          'C. Ngày 22/12/1945 tại Tân Trào, Tuyên Quang, do đồng chí Hoàng Văn Thái chỉ huy',
+          'D. Ngày 19/8/1945 tại Hà Nội, do đồng chí Trường Chinh chỉ huy'
+        ],
         answer: 0,
-        explanation: 'Quân đội nhân dân Việt Nam là lực lượng vũ trang nhân dân, có nhiệm vụ bảo vệ Tổ quốc, giữ gìn an ninh quốc gia và thực hiện nghĩa vụ quốc phòng.'
+        explanation: 'Theo bài giảng mục I.2: "Ngày 22 tháng 12 năm 1944, tại huyện Nguyên Bình, tỉnh Cao Bằng, dưới sự chỉ huy của đồng chí Võ Nguyên Giáp, Đội Việt Nam tuyên truyền giải phóng quân, tiền thân của Quân đội nhân dân Việt Nam được thành lập. Khi đó, Đội chỉ có 34 cán bộ, chiến sĩ".'
       },
       {
         id: 2,
-        category: 'Quân chủng',
-        title: 'Lực lượng nào có nhiệm vụ bảo vệ vùng trời, không phận và thực hiện chiến đấu trên không?',
-        options: ['Không quân', 'Hải quân', 'Bộ binh', 'Công binh'],
-        answer: 0,
-        explanation: 'Không quân là quân chủng thực hiện nhiệm vụ trên không, bảo vệ vùng trời và không phận quốc gia.'
+        category: 'Lịch sử QĐND Việt Nam',
+        title: 'Ngay sau khi thành lập, Đội Việt Nam tuyên truyền giải phóng quân đã đánh thắng hai trận đầu liên tiếp nào, mở đầu truyền thống "đánh chắc thắng, đánh thắng ngay trận đầu"?',
+        options: [
+          'A. Đông Khê và Thất Khê',
+          'B. Phai Khắt và Nà Ngần',
+          'C. Đồn Lạc Tịnh và Cầu Bông',
+          'D. Nghĩa Lộ và Đoan Hùng'
+        ],
+        answer: 1,
+        explanation: 'Theo bài giảng mục I.2: Thực hiện chỉ thị "Trận đầu phải thắng" của lãnh tụ Hồ Chí Minh, chỉ hai ngày sau khi thành lập, với lối đánh bất ngờ, dũng cảm, mưu trí, đội đã đánh thắng hai trận đầu liên tiếp là Phai Khắt, Nà Ngần, mở đầu truyền thống đánh tiêu diệt, đánh chắc thắng của QĐND Việt Nam.'
       },
       {
         id: 3,
-        category: 'Binh chủng',
-        title: 'Binh chủng nào là lực lượng chủ lực tiến công, đánh chiếm và phòng ngự trên mặt đất?',
-        options: ['Bộ binh', 'Pháo binh', 'Công binh', 'Không quân'],
-        answer: 0,
-        explanation: 'Bộ binh là binh chủng quyết định trực tiếp trên chiến trường mặt đất, thực hiện chiến đấu gần, tiến công và phòng ngự.'
+        category: 'Chức năng của QĐND',
+        title: 'Ba chức năng cơ bản của Quân đội nhân dân Việt Nam được Đảng và Bác Hồ xác định là gì?',
+        options: [
+          'A. Đội quân chiến đấu, đội quân bảo vệ và đội quân cứu nạn',
+          'B. Đội quân chính trị, đội quân tác chiến và đội quân nghiên cứu',
+          'C. Đội quân chiến đấu, đội quân công tác và đội quân lao động sản xuất',
+          'D. Đội quân răn đe, đội quân phòng thủ và đội quân đối ngoại'
+        ],
+        answer: 2,
+        explanation: 'Theo bài giảng mục I.3: Đảng Cộng sản Việt Nam và Chủ tịch Hồ Chí Minh đã xác định: Quân đội nhân dân Việt Nam là quân đội cách mạng, "đội quân chiến đấu, đội quân công tác và sản xuất" (lao động sản xuất).'
       },
       {
         id: 4,
-        category: 'Binh chủng',
-        title: 'Binh chủng nào chủ yếu thực hiện nhiệm vụ bắn phá, yểm trợ hỏa lực cho các đơn vị chiến đấu?',
-        options: ['Bộ binh', 'Pháo binh', 'Công binh', 'Tăng thiết giáp'],
-        answer: 1,
-        explanation: 'Pháo binh có nhiệm vụ bắn phá, hỏa lực và hỗ trợ cho các đơn vị chiến đấu bằng hỏa lực nặng.'
+        category: 'Cơ cấu tổ chức QĐND',
+        title: 'Ai là người chỉ huy cao nhất của Quân đội nhân dân và Dân quân tự vệ?',
+        options: [
+          'A. Tổng Tham mưu trưởng QĐND Việt Nam',
+          'B. Chủ nhiệm Tổng cục Chính trị',
+          'C. Bộ trưởng Bộ Quốc phòng',
+          'D. Chủ tịch Ủy ban Quốc phòng và An ninh Quốc hội'
+        ],
+        answer: 2,
+        explanation: 'Theo bài giảng mục I.4: "Bộ trưởng Bộ Quốc phòng là người chỉ huy cao nhất của Quân đội nhân dân và Dân quân tự vệ; là Ủy viên Hội đồng Quốc phòng và An ninh, Phó Bí thư Quân ủy Trung ương; là thành viên Chính phủ..."'
       },
       {
         id: 5,
-        category: 'Binh chủng',
-        title: 'Binh chủng nào thường thực hiện nhiệm vụ đánh dấu, san lấp, sửa chữa, đào hào, mở đường qua địa hình khó khăn?',
-        options: ['Công binh', 'Pháo binh', 'Tăng thiết giáp', 'Không quân'],
-        answer: 0,
-        explanation: 'Công binh là binh chủng chuyên trách về kỹ thuật, đào, sửa đường, mở luồng, xây dựng công sự chiến đấu.'
+        category: 'Cơ cấu tổ chức QĐND',
+        title: 'Cơ quan nào là cơ quan chỉ huy, điều hành Quân đội nhân dân và Dân quân tự vệ, mà Tổng Tham mưu trưởng thay thế Bộ trưởng BQP điều hành khi vắng mặt?',
+        options: [
+          'A. Tổng cục Chính trị',
+          'B. Bộ Tổng Tham mưu',
+          'C. Tổng cục Hậu cần – Kỹ thuật',
+          'D. Văn phòng Quân ủy Trung ương'
+        ],
+        answer: 1,
+        explanation: 'Theo bài giảng mục I.4: "Bộ Tổng Tham mưu là cơ quan chỉ huy, điều hành Quân đội nhân dân và Dân quân tự vệ; tổ chức, chỉ đạo sự phát triển của QĐND và DQTV, đồng thời chỉ huy các hoạt động quân sự. Tổng Tham mưu trưởng - Thứ trưởng BQP là người thay thế Bộ trưởng BQP điều hành các hoạt động khi Bộ trưởng vắng mặt".'
       },
       {
         id: 6,
-        category: 'Quân chủng',
-        title: 'Hải quân Việt Nam có nhiệm vụ bảo vệ chủ quyền, an ninh trên biển, đảo và vùng biển của Tổ quốc?',
-        options: ['Đúng', 'Sai'],
-        answer: 0,
-        explanation: 'Hải quân có nhiệm vụ bảo vệ các tuyến biển, đảo, lãnh hải và thực hiện chiến đấu trên biển.'
+        category: 'Cơ cấu tổ chức Lục quân',
+        title: 'Theo sơ đồ tổ chức và điều chỉnh lực lượng hiện nay trong bài giảng, hai Quân đoàn cơ động lớn nhất của Lục quân mang phiên hiệu nào?',
+        options: [
+          'A. Quân đoàn 1 và Quân đoàn 2',
+          'B. Quân đoàn 3 và Quân đoàn 4',
+          'C. Quân đoàn 12 và Quân đoàn 34',
+          'D. Quân đoàn 15 và Quân đoàn 16'
+        ],
+        answer: 2,
+        explanation: 'Theo bài giảng mục I.4 và sơ đồ Hình 3.2: "Các Quân đoàn (12, 34) là đơn vị cơ động lớn nhất của Lục quân, có nhiệm vụ bảo vệ các địa bàn chiến lược trọng yếu của quốc gia".'
       },
       {
         id: 7,
-        category: 'Binh chủng',
-        title: 'Tăng - Thiết giáp chủ yếu được sử dụng cho nhiệm vụ nào sau đây?',
-        options: ['Đánh chặn, tấn công, đột phá trên mặt đất', 'Pháo binh yểm hộ', 'Bảo vệ vùng trời', 'Chữa bệnh ở bệnh viện quân y'],
+        category: 'Quân chủng Hải quân',
+        title: 'Quân chủng Hải quân Việt Nam lấy ngày truyền thống là ngày nào, gắn liền với sự kiện thành lập cơ quan nào?',
+        options: [
+          'A. Ngày 07/5/1955 - Thành lập Cục Phòng thủ bờ biển',
+          'B. Ngày 26/4/1955 - Thành lập Trường Huấn luyện bờ biển',
+          'C. Ngày 05/8/1964 - Trận đầu đánh thắng máy bay Mỹ',
+          'D. Ngày 23/10/1961 - Khai thông đường Hồ Chí Minh trên biển'
+        ],
         answer: 0,
-        explanation: 'Tăng - thiết giáp có sức mạnh cơ động và hỏa lực lớn, phù hợp cho tấn công, đột phá và đánh chiếm.'
+        explanation: 'Theo bài giảng mục II.1: "Ngày 7 tháng 5 năm 1955, Bộ Quốc phòng - Tổng tư lệnh ra Nghị định số 284/NĐ-A thành lập Cục Phòng thủ bờ biển... Về sau, ngày 7 tháng 5 được chọn làm ngày thành lập của Hải quân nhân dân Việt Nam".'
       },
       {
         id: 8,
-        category: 'Lý thuyết chung',
-        title: 'Binh chủng nào được xem là “mặt trận” trực tiếp chiến đấu trên không gian đất liền, có nhiệm vụ tiêu diệt địch gần chiến tuyến?',
-        options: ['Bộ binh', 'Hải quân', 'Phòng không', 'Thuỷ quân lục chiến'],
-        answer: 0,
-        explanation: 'Bộ binh trực tiếp tham chiến trên mặt đất, đánh gần, bám sát chiến tuyến và chiến đấu trong địa hình thực tế.'
+        category: 'Quân chủng Hải quân',
+        title: 'Quân chủng Hải quân Việt Nam hiện nay được tổ chức biên chế thành bao nhiêu Vùng Hải quân?',
+        options: [
+          'A. 3 Vùng (Vùng 1, 2, 3)',
+          'B. 4 Vùng (Vùng 1, 2, 3, 4)',
+          'C. 5 Vùng (Vùng 1, 2, 3, 4, 5)',
+          'D. 6 Vùng (Vùng 1, 2, 3, 4, 5, 6)'
+        ],
+        answer: 2,
+        explanation: 'Theo bài giảng mục II.1: "Các đơn vị trực thuộc gồm các Bộ Tư lệnh Vùng Hải quân (Bộ Tư lệnh Vùng 1, 2, 3, 4, 5), một số lữ đoàn, học viện, nhà trường, đơn vị kinh tế - quốc phòng, viện kỹ thuật".'
       },
       {
         id: 9,
-        category: 'Quân chủng',
-        title: 'Quân chủng nào có nhiệm vụ chiến đấu trên biển, bảo vệ chủ quyền biển đảo và thực hiện các nhiệm vụ quân sự ở biển?',
-        options: ['Hải quân', 'Không quân', 'Pháo binh', 'Bộ binh'],
+        category: 'Quân chủng Hải quân',
+        title: 'Quân chủng Hải quân được xây dựng và phát triển với thành phần gồm 5 binh chủng nào?',
+        options: [
+          'A. Tàu mặt nước, Tàu ngầm, Không quân Hải quân, Pháo binh - Tên lửa bờ, Hải quân đánh bộ',
+          'B. Tàu mặt nước, Tàu ngầm, Cảnh sát biển, Biên phòng biển, Đặc công nước',
+          'C. Tàu tuần tra, Tàu quét lôi, Trực thăng săn ngầm, Công binh đảo, Pháo phòng không bờ',
+          'D. Tàu vận tải, Tàu hộ vệ, Tên lửa bờ, Tăng thiết giáp biển, Thông tin trinh sát'
+        ],
         answer: 0,
-        explanation: 'Hải quân là quân chủng chuyên trách chiến đấu trên biển, bảo vệ vùng biển và hải đảo.'
+        explanation: 'Theo bài giảng mục II.1: "Quân chủng Hải quân được xây dựng và phát triển cách mạng, chính quy, tinh nhuệ, hiện đại với thành phần gồm 5 binh chủng: Tàu mặt nước, Tàu ngầm; Không quân Hải quân; Pháo binh - Tên lửa bờ; Hải quân đánh bộ (ngoài ra còn có Đặc công Hải quân và các đơn vị bảo đảm)".'
       },
       {
         id: 10,
-        category: 'Binh chủng',
-        title: 'Binh chủng nào tiến hành xây dựng công sự, bãi tập, hầm ngầm và hỗ trợ quân đội trong chiến đấu phòng ngự?',
-        options: ['Công binh', 'Pháo binh', 'Thiết giáp', 'Bộ binh'],
+        category: 'Quân chủng PK - KQ',
+        title: 'Quân chủng Phòng không - Không quân được thành lập vào ngày tháng năm nào trên cơ sở sáp nhập những cơ quan nào?',
+        options: [
+          'A. Ngày 22/10/1963 trên cơ sở sáp nhập Bộ Tư lệnh Phòng không và Cục Không quân',
+          'B. Ngày 19/5/1965 trên cơ sở sáp nhập Trung đoàn Không quân 921 và Bộ đội Cao xạ',
+          'C. Ngày 16/5/1977 trên cơ sở sáp nhập Binh chủng Rađa và Binh chủng Tên lửa',
+          'D. Ngày 03/3/1999 trên cơ sở giải thể Quân chủng Phòng không độc lập'
+        ],
         answer: 0,
-        explanation: 'Công binh có vai trò rất quan trọng trong xây dựng công sự, kỹ thuật chiến đấu, cứu hộ và đảm bảo đường vận chuyển.'
+        explanation: 'Theo bài giảng mục II.2: "Thành lập ngày 22 tháng 10 năm 1963 trên cơ sở sáp nhập Bộ Tư lệnh Phòng không và Cục Không quân. Sau thời gian chia tách (1977-1999) theo mô hình Liên Xô, từ tháng 3/1999 hai Quân chủng lại được sáp nhập trở về Quân chủng Phòng không - Không quân".'
       },
       {
         id: 11,
-        category: 'Lý thuyết chung',
-        title: 'Nhiệm vụ của quân đội nhân dân Việt Nam là bảo vệ sự sống còn của dân tộc, chủ quyền và sự ổn định của đất nước?',
-        options: ['Đúng', 'Sai'],
-        answer: 0,
-        explanation: 'Quân đội bảo vệ Tổ quốc, giữ vững an ninh, ổn định chính trị, trật tự xã hội và quyền lợi của nhân dân.'
+        category: 'Binh chủng Pháo binh - Tên lửa',
+        title: 'Binh chủng Pháo binh vinh dự được Chủ tịch Hồ Chí Minh trao tặng 8 chữ vàng truyền thống nào vào ngày 13/4/1967?',
+        options: [
+          'A. Mở đường thắng lợi, đánh giỏi, bắn trúng',
+          'B. Chân đồng, vai sắt, đánh giỏi, bắn trúng',
+          'C. Đã ra quân là đánh thắng, tiến công dũng mãnh',
+          'D. Tinh thần thép, ý chí sắt, bách phát bách trúng'
+        ],
+        answer: 1,
+        explanation: 'Theo bài giảng mục II.3: "Chủ tịch Hồ Chí Minh đã tặng binh chủng Pháo binh 8 chữ “Chân đồng, vai sắt, đánh giỏi, bắn trúng” ngày 13 tháng 4 năm 1967".'
       },
       {
         id: 12,
-        category: 'Quân chủng',
-        title: 'Trong quân đội, lực lượng nào có nhiệm vụ phòng không, đánh chặn máy bay, tên lửa của đối phương?',
-        options: ['Phòng không', 'Công binh', 'Bộ binh', 'Hải quân'],
-        answer: 0,
-        explanation: 'Phòng không là lực lượng chuyên trách bảo vệ không phận, phát hiện và đánh chặn các mục tiêu trên không.'
+        category: 'Binh chủng Pháo binh - Tên lửa',
+        title: 'Vị trí, vai trò hỏa lực của Binh chủng Pháo binh - Tên lửa trong Quân đội nhân dân Việt Nam được xác định là gì?',
+        options: [
+          'A. Lực lượng tác chiến độc lập duy nhất của Lục quân',
+          'B. Lực lượng phòng thủ thụ động bảo vệ các căn cứ quân sự',
+          'C. Hỏa lực chính của Lục quân, đồng thời là hỏa lực chính ở mặt đất của QĐND Việt Nam',
+          'D. Lực lượng cơ động thọc sâu chủ yếu của bộ binh cơ giới'
+        ],
+        answer: 2,
+        explanation: 'Theo bài giảng mục II.3: "Binh chủng Pháo binh - tên lửa là một binh chủng chiến đấu, hoả lực chính của Lục quân, đồng thời là hoả lực chính ở mặt đất của Quân đội nhân dân Việt Nam được trang bị các loại pháo, tên lửa, súng cối".'
       },
       {
         id: 13,
-        category: 'Lý thuyết chung',
-        title: 'Sự nghiệp quân sự của Đảng Cộng sản Việt Nam luôn dựa trên nguyên tắc tập trung dân chủ, thống nhất ý chí và hành động?',
-        options: ['Đúng', 'Sai'],
-        answer: 0,
-        explanation: 'Quân đội nhân dân Việt Nam hoạt động theo nguyên tắc tập trung dân chủ, thống nhất lãnh đạo và chỉ huy.'
+        category: 'Binh chủng Tăng thiết giáp',
+        title: 'Ngày truyền thống của Binh chủng Tăng thiết giáp là ngày nào, gắn liền với sự kiện thành lập đơn vị nào?',
+        options: [
+          'A. Ngày 02/9/1959 - Thành lập Đoàn cán bộ thiết giáp',
+          'B. Ngày 05/10/1959 - Thành lập Trung đoàn xe tăng 202 (mật danh H02)',
+          'C. Ngày 07/2/1968 - Trận đầu thắng lợi tại Tà Mây - Làng Vây',
+          'D. Ngày 30/4/1975 - Xe tăng húc đổ cổng Dinh Độc Lập'
+        ],
+        answer: 1,
+        explanation: 'Theo bài giảng mục II.4: Ngày 5 tháng 10 năm 1959, Bộ Quốc phòng ký quyết định thành lập trung đoàn thiết giáp đầu tiên lấy phiên hiệu Trung đoàn 202 (mật danh H02). Ngày 5 tháng 10 về sau trở thành ngày truyền thống của Binh chủng Tăng thiết giáp.'
       },
       {
         id: 14,
-        category: 'Binh chủng',
-        title: 'Binh chủng nào có nhiệm vụ vận chuyển, bảo dưỡng, phục vụ hậu cần cho chiến đấu và sinh hoạt quân đội?',
-        options: ['Hậu cần', 'Pháo binh', 'Không quân', 'Bộ binh'],
-        answer: 0,
-        explanation: 'Hậu cần đảm bảo quân nhu, vận tải, sửa chữa và hỗ trợ cho lực lượng chiến đấu trong mọi điều kiện.'
+        category: 'Binh chủng Tăng thiết giáp',
+        title: 'Binh chủng Tăng thiết giáp giữ vị trí, vai trò gì trong đội hình tác chiến của Lục quân và Hải quân đánh bộ?',
+        options: [
+          'A. Lực lượng bảo đảm hậu cần và thông tin liên lạc',
+          'B. Lực lượng chi viện hỏa lực tầm xa từ phía sau',
+          'C. Lực lượng đột kích quan trọng của Lục quân và Hải quân đánh bộ',
+          'D. Lực lượng chuyên trách trinh sát và ngụy trang'
+        ],
+        answer: 2,
+        explanation: 'Theo bài giảng mục II.4: "Binh chủng Tăng thiết giáp là một binh chủng chiến đấu, là lực lượng đột kích quan trọng của Lục quân và Hải quân đánh bộ, được trang bị xe tăng, xe thiết giáp là loại trang bị kỹ thuật hiện đại, hoả lực mạnh, sức cơ động cao, khả năng tự vệ tốt".'
       },
       {
         id: 15,
-        category: 'Lý thuyết chung',
-        title: 'Đội ngũ quân y có nhiệm vụ cứu thương, điều trị bệnh tật cho cán bộ, chiến sĩ và nhân dân trong tình huống quân sự?',
-        options: ['Đúng', 'Sai'],
+        category: 'Binh chủng Đặc công',
+        title: 'Binh chủng Đặc công được tổ chức và phát triển thành ba lực lượng tác chiến đặc thù nào?',
+        options: [
+          'A. Đặc công bộ, Đặc công nước và Đặc công biệt động',
+          'B. Đặc công rừng núi, Đặc công đồng bằng và Đặc công đô thị',
+          'C. Đặc công hỏa lực, Đặc công xung kích và Đặc công trinh sát',
+          'D. Đặc công đổ bộ, Đặc công dù và Đặc công cơ giới'
+        ],
         answer: 0,
-        explanation: 'Quân y là lực lượng y tế quân đội, giữ vai trò thống nhất chăm sóc sức khỏe, cứu chữa thương binh và bệnh binh.'
+        explanation: 'Theo bài giảng mục II.5: Binh chủng Đặc công thành lập ngày 19/3/1967, phát triển từ lối đánh "công đồn đặc biệt" ở Nam Bộ, hình thành ba lực lượng: Đặc công bộ; Đặc công nước; Đặc công biệt động. Sử dụng phương pháp tác chiến đặc biệt, tiến công mục tiêu hiểm yếu sâu trong hậu phương địch.'
       },
       {
         id: 16,
-        category: 'Binh chủng',
-        title: 'Binh chủng nào có nhiệm vụ xây dựng tiền đồn, chiến hào, bãi tập, làm đường giao thông chiến lược cho quân đội?',
-        options: ['Công binh', 'Bộ binh', 'Hải quân', 'Không quân'],
-        answer: 0,
-        explanation: 'Công binh chuyên xây dựng, sửa chữa, đào hào, mở đường và bảo đảm điều kiện chiến đấu cho các đơn vị.'
+        category: 'Binh chủng Công binh',
+        title: 'Năm 1952, Binh chủng Công binh vinh dự được Chủ tịch Hồ Chí Minh trao tặng lá cờ thêu dòng chữ gì?',
+        options: [
+          'A. Đánh giỏi, bắn trúng',
+          'B. Mở đường thắng lợi',
+          'C. Tinh nhuệ, kiên cường',
+          'D. Vượt mọi hiểm nguy'
+        ],
+        answer: 1,
+        explanation: 'Theo bài giảng mục II.6: Binh chủng Công binh thành lập ngày 25/3/1946 (Sắc lệnh 34-SL lập Công chính Giao thông Cục). "Năm 1952 được Chủ tịch Hồ Chí Minh tặng cờ “Mở đường thắng lợi”".'
       },
       {
         id: 17,
-        category: 'Quân chủng',
-        title: 'Lực lượng nào có nhiệm vụ chiến đấu trên không gian biển và giữ gìn chủ quyền biển đảo?',
-        options: ['Hải quân', 'Bộ binh', 'Pháo binh', 'Quân y'],
-        answer: 0,
-        explanation: 'Hải quân là quân chủng chuyên nhiệm ở biển, giữ an ninh biển, bảo vệ đảo và vùng biển.'
+        category: 'Binh chủng Hóa học',
+        title: 'Nhiệm vụ nòng cốt của Binh chủng Hóa học (thành lập ngày 19/4/1958) trong tác chiến là gì?',
+        options: [
+          'A. Đánh chiếm các mục tiêu công nghiệp hóa chất của đối phương',
+          'B. Đảm bảo hóa học, nòng cốt phòng chống vũ khí hủy diệt lớn (hóa học, sinh học, vũ khí lửa), ngụy trang tạo khói',
+          'C. Sản xuất và thử nghiệm vũ khí hóa học quy mô chiến dịch',
+          'D. Vận chuyển xăng dầu và bảo dưỡng động cơ cho toàn quân'
+        ],
+        answer: 1,
+        explanation: 'Theo bài giảng mục II.7: "Nhiệm vụ của lực lượng Hoá học là đảm bảo hoá học cho hoạt động tác chiến. Làm nòng cốt trong việc phòng chống vũ khí huỷ diệt lớn (vũ khí hoá học, vũ khí sinh học, vũ khí lửa,…). Có thể trực tiếp chiến đấu bằng vũ khí bộ binh và súng phun lửa. Ngụy trang bảo vệ các mục tiêu quan trọng và nghi binh đánh lừa địch bằng màn khói".'
       },
       {
         id: 18,
-        category: 'Lý thuyết chung',
-        title: 'Quân đội nhân dân Việt Nam là lực lượng vũ trang, có tính chiến đấu cao, đặt dưới sự lãnh đạo tuyệt đối của Đảng Cộng sản Việt Nam?',
-        options: ['Đúng', 'Sai'],
-        answer: 0,
-        explanation: 'Theo Hiến pháp và nguyên tắc chính trị, quân đội nhân dân Việt Nam luôn đặt dưới sự lãnh đạo tuyệt đối, trực tiếp của Đảng.'
+        category: 'Binh chủng Thông tin liên lạc',
+        title: 'Binh chủng Thông tin liên lạc lấy ngày truyền thống là ngày 09/9/1945 gắn liền với sự kiện lịch sử nào?',
+        options: [
+          'A. Thành lập Trung đoàn thông tin đầu tiên của QĐND',
+          'B. Thành lập Phòng Thông tin Liên lạc quân sự do đồng chí Hoàng Đạo Thúy làm Trưởng phòng',
+          'C. Thành lập Bộ Tư lệnh Thông tin liên lạc',
+          'D. Tiếp quản Tổng đài Bưu điện Hà Nội trong Cách mạng Tháng Tám'
+        ],
+        answer: 1,
+        explanation: 'Theo bài giảng mục II.8: "Thành lập ngày 9 tháng 9 năm 1945. Vào ngày 7 tháng 9, Phòng Thông tin Liên lạc quân sự được thành lập, do Hoàng Đạo Thúy làm Trưởng phòng... Về sau ngày 9 tháng 9 là ngày truyền thống của Binh chủng".'
       },
       {
         id: 19,
-        category: 'Binh chủng',
-        title: 'Binh chủng nào có nhiệm vụ đánh chặn, tiêu diệt các phương tiện chiến đấu của địch và yểm hộ chiến đấu ở mặt đất?',
-        options: ['Tăng thiết giáp', 'Công binh', 'Hậu cần', 'Quân y'],
-        answer: 0,
-        explanation: 'Tăng - thiết giáp có hỏa lực mạnh, cơ động tốt, phù hợp cho đánh chặn và phá vỡ hệ thống phòng ngự đối phương.'
+        category: 'Lực lượng Tác chiến Không gian mạng',
+        title: 'Lực lượng nào của QĐND Việt Nam được thành lập ngày 15/8/2017 đóng vai trò nòng cốt trong bảo vệ chủ quyền quốc gia trên không gian mạng?',
+        options: [
+          'A. Cục Công nghệ thông tin Bộ Quốc phòng',
+          'B. Bộ Tư lệnh Tác chiến không gian mạng',
+          'C. Viện Công nghệ thông tin Quân sự',
+          'D. Trung tâm Giám sát mạng quốc gia'
+        ],
+        answer: 1,
+        explanation: 'Theo bài giảng mục I.4: "Bộ Tư lệnh Tác chiến không gian mạng (thành lập ngày 15 tháng 8 năm 2017) là lực lượng chiến đấu của Quân đội nhân dân Việt Nam, đóng vai trò nòng cốt trong bảo vệ chủ quyền quốc gia trên không gian mạng, phòng, chống chiến tranh thông tin, chiến tranh không gian mạng..."'
       },
       {
         id: 20,
-        category: 'Lý thuyết chung',
-        title: 'Nhiệm vụ của quân đội là thực hiện nghĩa vụ quốc phòng, bảo vệ Tổ quốc, góp phần giữ gìn hòa bình và an ninh khu vực?',
-        options: ['Đúng', 'Sai'],
-        answer: 0,
-        explanation: 'Quân đội có vai trò quốc phòng, an ninh, đảm bảo hòa bình và bảo vệ nền độc lập, chủ quyền của đất nước.'
+        category: 'Hiệp đồng tác chiến',
+        title: 'Trong tác chiến hiệp đồng quân, binh chủng, nguyên tắc nào là trung tâm và cơ quan nào chủ trì hiệp đồng tác chiến?',
+        options: [
+          'A. Lấy hành động của không quân làm trung tâm; cơ quan tham mưu không quân chủ trì',
+          'B. Lấy hành động binh chủng hợp thành làm trung tâm; cơ quan tham mưu binh chủng hợp thành chủ trì',
+          'C. Lấy hỏa lực pháo binh làm trung tâm; cơ quan tham mưu pháo binh chủ trì',
+          'D. Lấy tốc độ đột kích của xe tăng làm trung tâm; Bộ Tư lệnh Quân đoàn chủ trì'
+        ],
+        answer: 1,
+        explanation: 'Theo bài giảng mục III.1 & III.4: "Tác chiến hiệp đồng quân chủng, binh chủng lấy hành động binh chủng hợp thành làm trung tâm, tập trung vào khu vực tác chiến chủ yếu, trận then chốt... Do cơ quan tham mưu binh chủng hợp thành chủ trì".'
       }
     ];
 
